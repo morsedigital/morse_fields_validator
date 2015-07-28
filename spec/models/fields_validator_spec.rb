@@ -16,9 +16,11 @@ RSpec.describe FieldsValidator, type: :module do
   end
 
   describe "validate_column_names" do 
+    it "should not squeak if column_names include input" do
+      expect{Thing.validate_column_names(*%w{name})}.to_not raise_error
+    end
     it "should squeak if column_names do not include input" do
-      skip
-      expect(Thing.validate_column_names("squirrels")).to raise_error("squirrels not included. please ensure necessary fields are in place")
+      expect{Thing.validate_column_names(*%w{squirrels})}.to raise_error(RuntimeError)
     end
   end
 end
