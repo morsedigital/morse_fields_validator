@@ -1,5 +1,4 @@
+require 'active_model'
+require 'active_support/all'
 require "morse_fields_validator/version"
-
-module MorseFieldsValidator
-  # Your code goes here...
-end
+require "morse_fields_validator/fields_validator"
