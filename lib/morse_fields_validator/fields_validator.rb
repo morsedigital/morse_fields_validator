@@ -3,7 +3,7 @@ module FieldsValidator
   extend ActiveSupport::Concern
 
   included do
-    validate :validate_column_names
+    validate :validate_column_names if respond_to?(:validate)
   end
 
   class_methods do 
