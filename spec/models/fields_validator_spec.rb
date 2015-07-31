@@ -17,13 +17,13 @@ RSpec.describe FieldsValidator, type: :module do
   end
 
   class ThingWithCorrectFields < Thing
-    def required_database_fields
+    def self.required_database_fields
       [:name]
     end
   end
 
   class ThingWithIncorrectFields < Thing
-    def required_database_fields
+    def self.required_database_fields
       [:squirrels]
     end
   end

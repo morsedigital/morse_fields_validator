@@ -26,6 +26,6 @@ module FieldsValidator
   private
 
   def validate_column_names
-    required_database_fields.each { |rdf| errors_add(rdf, "does not have a column in the database.")  unless self.class.column_names.include?(rdf)} if required_database_fields.any?
+    self.class.required_database_fields.each { |rdf| errors_add(rdf, "does not have a column in the database.")  unless self.class.column_names.include?(rdf)} if self.class.required_database_fields.any?
   end
 end
