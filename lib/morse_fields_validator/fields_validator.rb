@@ -14,11 +14,11 @@ module FieldsValidator
     end
 
     def required_attributes
-      defined?(super) ? super : []
+      defined?(super) and super.is_a?(Array) ? super : []
     end
 
     def required_database_fields
-      defined?(super) ? super : []
+      defined?(super) and super.is_a?(Array) ? super : []
     end
 
   end
