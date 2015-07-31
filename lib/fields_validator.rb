@@ -8,9 +8,11 @@ module FieldsValidator
 
   class_methods do 
     def validate_required_attributes
-      required_attributes.each do |a|
-        validates a.to_sym, presence: true 
-      end if required_attributes and required_attributes.any?
+      if required_attributes and required_attributes.any?
+        required_attributes.each do |a|
+          validates a.to_sym, presence: true 
+        end 
+      end
     end
 
     def required_attributes
