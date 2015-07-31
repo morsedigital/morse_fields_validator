@@ -10,7 +10,7 @@ module FieldsValidator
     def validate_required_attributes
       required_attributes.each do |a|
         validates a.to_sym, presence: true 
-      end if required_attributes.any?
+      end if required_attributes and required_attributes.any?
     end
 
     def required_attributes
