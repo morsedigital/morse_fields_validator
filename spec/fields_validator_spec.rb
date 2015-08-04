@@ -8,7 +8,7 @@ RSpec.describe FieldsValidator, type: :module do
       @errors={}
     end
     def self.column_names
-      [:name] 
+      ["name"] 
     end
     def errors_add(k,v)
       @errors[k]=v
