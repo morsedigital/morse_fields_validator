@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
     #spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
   end
 
-  spec.summary       = %q{Addes functions to validate fields in Databases using ActiveRecord} 
+  spec.summary       = %q{Addes functions to validate fields in Databases using ActiveRecord}
   spec.homepage      = "https://github.com/morsedigital/morse_fields_validator"
   spec.license       = "MIT"
 
@@ -21,8 +21,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activemodel","~>4.2"
-  spec.add_dependency "activesupport","~>4.2"
+  # spec.add_dependency "activemodel","~>4.2"
+  # spec.add_dependency "activesupport","~>4.2"
 
   spec.add_development_dependency "bundler", "~> 1.8"
   spec.add_development_dependency "coveralls", "~> 0.8"
